@@ -5,10 +5,10 @@ public class RadioTest {
 
     @Test
     public void shouldIncreaseVolumeByOne() {
-    Radio radio = new Radio();
-    radio.volumeIncrease();
-    int actual = radio.getCurrentVolume();
-    int expected = 1;
+        Radio radio = new Radio();
+        radio.volumeIncrease();
+        int actual = radio.getCurrentVolume();
+        int expected = 1;
         Assertions.assertEquals(expected, actual);
     }
 
