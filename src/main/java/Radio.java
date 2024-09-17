@@ -29,11 +29,10 @@ public class Radio {
     public void setFrequency(int desiredFrequency) {
         if (desiredFrequency > 9) {
             return;
-        }
-        if (desiredFrequency < 0) {
+        } else if (desiredFrequency < 0) {
             return;
-        }
-        currentFrequency = desiredFrequency;
+        } else {currentFrequency = desiredFrequency;
+    }
     }
 
     public void setVolumeToMax() {
@@ -42,11 +41,17 @@ public class Radio {
 
     public void volumeIncrease() {
         if (currentVolume == 100) {
-        } else currentVolume++;
+            return;
+        } else {
+            currentVolume++;
+        }
     }
 
     public void volumeDecrease() {
         if (currentVolume == 0) {
-        } else currentVolume = currentVolume - 1;
+            return;
+        } else {
+            currentVolume = currentVolume - 1;
+        }
     }
 }
